@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <div>
+        <label for="nombre">Nombre</label>
+        <input type="text" name="nombre" />
+      </div>
+      <div>
+        <label for="apellidos">Apellidos</label>
+        <input type="text" name="apellidos" />
+      </div>
+      <div>
+        <label for="fecha_nacimiento">Fecha Nacimiento</label>
+        <input type="date" name="fecha_nacimiento" >
+      </div>
+      <div>
+        
+        <input type="radio" name="Sexo" value="M" >Masculino
+        <input type="radio" name="Sexo" value="F"> Femenino
+      </div>
+      <div>
+         <h4>gustos</h4>
+         <input type="checkbox" name="Musica" >Musica <br>
+         <input type="checkbox" name="Deportes" >Deportes <br>
+         <input type="checkbox" name="Caminar" >Caminar <br>
+         <input type="checkbox" name="Estudiar" checked>Estudiar
+
+
+      </div>
+      <div>
+         <label for="color_favorito">Color Favorito</label>
+         <input type="color" name="color_favorito" >
+
+      </div>
+      <div>
+        <label for="Edada">Edad</label>
+        <input type="number" name="edad" >
+      </div>
+      <div>
+        <label for="carrera">Carrera</label>
+        <select name="carrera" >
+            <option value="IS">Ing. de Sistemas</option>
+            <option value="CC">INg. en Ciencias de la Computacion</option>
+
+        </select>
+      </div>
+      <input type="hidden" name="secreo" value="2">
+      <label for="biografia">Biografia</label>
+      <textarea name="biografia" cols="3" rows="5"></textarea>
+      <div>
+      <input type="submit" value="Enviar">
+      <input type="reset" value="Limpiar">
+    </div>
+    </form>
+  </body>
+</html>
