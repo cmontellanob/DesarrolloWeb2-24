@@ -1,0 +1,30 @@
+
+h1 {
+    color:chocolate;
+    text-align: left;
+    font-size: 10px;
+}
+.par {
+    color :green;
+    padding-top: 20px;
+    padding-left: 10px;
+    border: 1px solid black;
+}
+.impar {
+    margin: 30px;
+    border: 10px dotted black;
+    padding-left: 30px;
+    color :rgb(125, 125, 211);
+}
+#parrafo {
+    background-color: turquoise;
+    color: white;
+    padding: 20px;
+    width: 300px;
+}
+.lista {
+    list-style-type: square;
+    color: red;
+    padding-left: 20px;
+
+}
