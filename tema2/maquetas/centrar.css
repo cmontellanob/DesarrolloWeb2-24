@@ -1,0 +1,29 @@
+.contenedor{
+    
+   
+    position:relative;
+    top: 100px;
+    margin: auto;
+	width: 90%;
+	height:600px;
+	border:1px solid #2600ff;
+}
+.caja {
+    background-color: aqua;
+    left: 100px;
+    top: 100px;
+    border: 1px solid black;
+    width: 200px;
+    position:fixed;
+    z-index: 1;
+}
+.caja2 {
+    background-color: rgb(255, 149, 0);
+    left: 100px;
+    top: 100px;
+    border: 1px solid black;
+    width: 200px;
+    position:fixed;
+    z-index: 10;
+    visibility: visible;
+}
