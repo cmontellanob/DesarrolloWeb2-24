@@ -6,19 +6,23 @@ class Pila {
 
     public function __construct($max)
     {
-        $this->$max=$max;
+        $this->max=$max;
         $this->tope=0;
+        
     }
     public function insertar($elem)
     {
+       
         if($this->max==$this->tope)
         {
             return "pila llena";
         }
         else
         {
-            $this->elementos[$this->tope];
+            
+            $this->elementos[$this->tope]=$elem;
             $this->tope++;
+
         }
     }
     public function eliminar()
@@ -29,7 +33,7 @@ class Pila {
         }
         else
         {
-            $elem=elementos[$this->tope];
+            $elem=$this->elementos[$this->tope];
             
             $this->tope--;
             return  $elem;
@@ -49,3 +53,5 @@ class Pila {
 
 
 }
+
+
