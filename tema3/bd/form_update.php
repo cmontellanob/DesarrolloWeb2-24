@@ -4,7 +4,7 @@ include ("acceso.php");
 include ("permiso.php");
 
 $id=$_GET['id'];
-$sql="SELECT id,nombres,apellidos,carnet,sexo,fecha_nacimiento,direccion,mesa_id FROM padron WHERE id=$id";
+$sql="SELECT fotografia, id,nombres,apellidos,carnet,sexo,fecha_nacimiento,direccion,mesa_id FROM padron WHERE id=$id";
 $sql2 ="SELECT id,numero_mesa FROM mesa";
 
 $resultado=$con->query($sql);
@@ -12,7 +12,9 @@ $resultado2 = $con->query($sql2);
 $fila=$resultado->fetch_assoc();
 ?>
 
-<form action="update.php" method="post">
+<form action="update.php" method="post" enctype="multipart/form-data">
+    <img src="images/<?php echo $fila['fotografia']; ?>">
+    <input type="file" name="fotografia" id="fotografia"><br>
     <input type="hidden" name="id" value="<?php echo $fila['id'];?>">
     <label for="nombres">Nombres</label>
     <input type="text" name="nombres"  value="<?php echo $fila['nombres'];?>"><br>
