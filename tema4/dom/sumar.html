@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sumar 3 numeros</title>
+</head>
+<body>
+    <h1>Sumar 3 numeros</h1>
+    
+        <label for="numero1">Numero 1</label><input type="number" id="numero1" >
+        <label for="numero2">Numero 2</label><input type="number" id="numero2" >
+        <label for="numero3">Numero 3</label><input type="number" id="numero3" >
+        <input type="button" value="Sumar" onclick="sumar()">
+        <p id="resultado"></p>
+        <script>
+            function sumar(){
+                var numero1=parseInt( document.getElementById("numero1").value);
+                var numero2=parseInt( document.getElementById("numero2").value);
+                var numero3=parseInt( document.getElementById("numero3").value);
+                var resultado=numero1+numero2+numero3;
+                document.getElementById("resultado").innerHTML="La suma es: "+resultado;
+            }
+        </script>
+
+    
+
+    
+</body>
+</html>

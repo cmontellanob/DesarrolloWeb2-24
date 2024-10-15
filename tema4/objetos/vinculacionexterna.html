@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function coche(marca, modelo, color) {
+        this.marca = marca
+        this.modelo = modelo
+        this.color = color
+        this.mostrar = MostrarCoche; //vinculacion externa
+        }
+        function MostrarCoche () {
+         alert("El autos marca "+this.marca+" y modelo "+this.modelo);
+        }
+        coche1 = new coche("Seat", "Toledo", "rojo");
+        console.log(coche1);
+        coche1.mostrar();
+        </script>
+        
+</body>
+</html>

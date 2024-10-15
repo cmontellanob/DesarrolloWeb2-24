@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action=""></form>
+        <label for="nombre">Nombre</label>
+        <input type="text" id="nombre">
+        <label for="sexo">Sexo      </label>
+        <input type="radio" id="sexo" name="sexo" value="hombre" checked>Hombre
+        <input type="radio" id="sexo" name="sexo" value="mujer">Mujer
+        <br>
+    </form>
+    <script>
+        var sexos=document.getElementsByName("sexo");
+        if (sexos[0].checked){
+            document.write("Hombre");
+        }else{
+            document.write("Mujer");
+        }
+    </script>
+</body>
+</html>

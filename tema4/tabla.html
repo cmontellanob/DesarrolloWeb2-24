@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="border: 1px solid black; border-collapse: collapse;">
+        <script>
+            fila=parseInt(prompt("introduce num de fila: "))
+            columna=parseInt(prompt("introduce numero de columna"))
+            for(i=0;i<fila;i++)
+            {
+                document.write("<tr>")
+                    for(j=0;j<columna;j++)
+                    {
+                        if((i+j) %2==0)
+                        {
+                            document.write(`<td style="border: 1px solid black;width:30px;height:30px;background-color:black;"></td>`)
+
+                        }
+                       
+                        else
+                        {
+                            document.write(`<td style="border: 1px solid black;width:30px;height:30px;">${i},${j}</td>`)
+
+
+                        }
+
+                    }
+
+                document.write("</tr>")
+                
+                
+            }
+    
+    
+        </script>
+
+    </table>
+    
+    
+</body>
+</html>
