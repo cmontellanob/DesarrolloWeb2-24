@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Lista de Compras</h1>
+    <input type="text" name="elemento" id="elemento">
+    <button onclick="anadir()" >Añadir</button>
+    <ul id="lista">
+
+    </ul>
+
+    <script>
+        var n=1;
+        function anadir(){
+            var lista = document.getElementById('lista');
+            var elemento = document.getElementById('elemento').value;
+            
+            var  compra = document.createElement("li");
+            compra.innerHTML=elemento;
+            if(n==1){
+                
+                compra.style.backgroundColor="white";
+                n=0;
+
+            }else{
+                compra.style.backgroundColor="yellow";
+                n=1;
+            }
+            lista.appendChild(compra);
+            console.log(lista);
+            document.getElementById('elemento').value="";
+            document.getElementById('elemento').focus();
+            
+            
+            
+
+       
+        }
+    </script>
+</body>
+</html>

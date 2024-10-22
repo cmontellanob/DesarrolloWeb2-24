@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Lista de Compras</h1>
+    <input type="text" name="elemento" id="elemento">
+    <button onclick="anadir()" >Añadir</button>
+    <ul id="lista">
+        
+    </ul>
+   
+    <script>
+        var n=1;
+        var color = "white"
+        function anadir()
+
+        {
+            var elemento =document.getElementById('elemento').value;
+            if(n==1){
+                
+                color="white";
+                n=0;
+                
+            }else{
+                color="yellow";
+                n=1;
+            }
+            document.getElementById('lista').innerHTML+=`<li style="background-color: ${color}">${elemento}</li>`;
+            document.getElementById('elemento').value="";
+            document.getElementById('elemento').focus();
+            
+        }
+
+    </script>
+
+</body>
+</html>

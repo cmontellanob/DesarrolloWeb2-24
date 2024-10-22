@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="registrar.php" method="post" id="formulario">
+      <label for="nombres">Nombres</label>
+      <input type="text" name="nombres" id="nombres" /> <span id="errornombre" style="color: red; display: none;">*Debe ingresar el nombre</span> <br />
+      <label for="direccion">Direccion</label>
+      <input type="text" name="direccion" id="direccion" />  <span id="errordireccion" style="color: red; display: none;">*Debe ingresar la direccion</span> <br />
+      <input type="button" value="enviar" onclick="validarForm()" />
+    </form>
+
+    <script>
+      function validarForm() {
+        var validar=true;
+        var formulario = document.getElementById("formulario");
+        if (formulario.nombres.value.length == 0) {
+          //comprueba que no esté vacío
+          formulario.nombres.focus();
+          document.getElementById("errornombre").style.display="inline";
+          validar = false; //devolvemos el foco
+        }else{
+          document.getElementById("errornombre").style.display="none";
+            
+        }
+        if (formulario.direccion.value.length == 0) {
+          //comprueba que no esté vacío
+          formulario.direccion.focus();
+          document.getElementById("errordireccion").style.display="inline";
+          validar = false; //devolvemos el foco
+        }else{
+          document.getElementById("errordireccion").style.display="none";
+        }
+        if(validar == true){
+            formulario.submit();
+        }
+      }
+    </script>
+  </body>
+</html>
