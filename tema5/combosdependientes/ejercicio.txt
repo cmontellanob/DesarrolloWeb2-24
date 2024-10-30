@@ -1,0 +1,2 @@
+Crear un formulario para el registro de mesas con los combos departamento  y provincia,
+al seleccionar un departamento debe poblar el comboprovincia por ajaxo fetch
