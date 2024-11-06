@@ -1,3 +1,8 @@
+var idPersona=0
+function setValor(valor) {
+	idPersona=valor;
+	console.log(valor);
+}
 function listar() {
 	var contenedor;
 	contenedor = document.getElementById('contenido');
@@ -8,10 +13,10 @@ function listar() {
 			lista = JSON.parse( ajax.responseText)
 console.log(lista) 
 html="";
-html+=  `<table>
+html+=  `<table class="table table-striped">
     <tr>
-        <th>Fotografia</th>
-        <th><a href="javascript:ordenar('nombres')">Nombres</a></th>
+        <th scope="col" >Fotografia</th>
+        <th ><a href="javascript:ordenar('nombres')">Nombres</a></th>
         <th><a href="javascript:ordenar('apellidos')">Apellidos</a></th>
         <th><a href="javascript:ordenar('carnet')">Carnet</a></th>
         <th><a href="javascript:ordenar('sexo')">Sexo</a></th>
@@ -32,9 +37,8 @@ html+=  `<table>
 <td>${lista[i].fecha_nacimiento}</td>
 <td>${lista[i].direccion}</td>
 <td>${lista[i].mesa}</td>
-       <td> <a href="javascript:cargarContenido('form_update.php?id=${lista[i].id} ')">Editar</a> </td>
-        
-       <td> <a href="javascript:confirmar('Desea Eliminar a la Persona',${lista[i].id} )">Eliminar</a></td>
+       <td> <div class="row"><div class="col"> <a class="btn btn-warning" href="javascript:cargarContenido('form_update.php?id=${lista[i].id} ')">Editar</a> 
+            <a class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#confirmarModal" onclick="setValor(${lista[i].id})" >Eliminar</a> </div> </div></td>
     </tr> `
 
 	}
@@ -59,11 +63,11 @@ function cargarContenido(abrir) {
 	ajax.send();
 }
 
-function eliminar(id) {
+function eliminar() {
 	var contenedor;
 	contenedor = document.getElementById('contenido');
 	var ajax = new XMLHttpRequest() //crea el objetov ajax 
-	ajax.open("get", 'delete.php?id='+id, true);
+	ajax.open("get", 'delete.php?id='+idPersona, true);
 	ajax.onreadystatechange = function () {
 		if (ajax.readyState == 4) {
 	
